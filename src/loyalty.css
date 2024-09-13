@@ -1,0 +1,593 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lilita One',serif;
+    text-decoration: none;
+    list-style: none;
+
+}
+
+body{
+   
+    justify-content: center;
+    background-color: #ffd700;
+    overflow-x: hidden;
+    padding-top: 10%;
+
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.3rem 10%;
+    
+    display: block;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    z-index: 100;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    z-index: -1;
+}
+
+.brand{
+  
+    color: black;
+    -webkit-text-stroke: 0.04rem #ffd700;
+    font-size: 3rem;
+    transition: all 0.3s ease 0s;
+}
+
+.brand:hover{
+    color: #ffd700;
+    
+}
+
+.brandpig{
+    color: #ffd700;
+    
+    font-size: 3rem;
+    transition: all 0.3s ease 0s;
+    margin-bottom: 2%;
+
+}
+
+.brandpig:hover{
+    color: black;
+    -webkit-text-stroke: 0.05rem #ffd700;
+   
+    
+}
+
+
+
+.navbar a{
+    position: relative;
+    font-size: 1rem;
+    color: #ffd700;
+    text-decoration: none;
+    
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+    
+    transition: .3s ease-in;
+    
+}
+
+.navbar a:nth-child(5){
+    background: #ffd700;
+    color: black;
+}
+
+.navbar a::after{
+    content: '';
+    position: absolute;
+    background-color: #ffd700;
+    height: 100%;
+    width: 0;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.3s;
+    
+}
+
+.navbar a:hover::after{
+    
+    width: 100%;
+   
+    
+}
+
+.navbar a:hover{
+ 
+    color: black;
+}
+
+.navbar a:nth-child(6):after{
+    
+    display: none;
+}
+.button1 button{
+    padding: 10px 10px;
+    background-color: #000000;
+    border-color: #ffd700;
+    color: #ffd700;
+    font-size: 1rem;
+    transition: all 0.3s ease 0s;
+}
+
+.button1 button:hover{
+    background-color: #ffd700;
+    color: black;
+}
+
+#check {
+    display: none;
+}
+
+.icons {
+    position: absolute;
+    font-size: 2.8rem;
+    right: 5%;
+    color: #ffd700;
+    cursor: pointer;
+    display: none;
+}
+
+
+
+/*content*/
+
+.horiline{
+    width: 50vw;
+    height: 2px;
+    background-color: black;
+}
+
+.loyaltyBox1{
+    padding-top: 5%;
+    padding-left: 20%;
+    padding-right: 20%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    
+    flex-wrap: wrap;
+}
+
+.loyaltyBox1 img{
+    width: 70vw;
+}
+
+.loyaltyh1{
+    font-size: 5rem;
+    font-family: 'Black Ops One';
+    font-weight: lighter;
+}
+
+.loyaltyh2{
+    font-size: 2rem;
+    font-family: 'Black Ops One';
+    font-weight: lighter;
+    
+}
+
+.loyaltyh3{
+    font-size: 3rem;
+    font-family: 'Black Ops One';
+    font-weight: lighter;
+    
+}
+
+.loyaltyp{
+    padding-left: 25%;
+    padding-right: 25%;
+    font-family: 'Black Ops One';
+    line-height: 25px;
+    font-weight: lighter;
+    
+}
+
+.loyalty2{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-bottom: 5%;
+    position: relative;
+
+}
+
+.loyaltyBox2 img{
+    position: relative;
+    width: 55vw;
+
+}
+
+
+
+/*footer*/
+footer{
+    
+    background-color: black;
+    width: 100%;
+    padding: 70px 30px 20px ;
+}
+
+.socialicon{
+    display: flex;
+    justify-content: center;
+}
+
+.socialicon a{
+    text-decoration: none;
+    padding: 10px ;
+    background-color: white;
+    margin: 10px;
+    border-radius: 50%;
+}
+
+.socialicon a i{
+    font-size: 2rem;
+    color: black;
+    opacity: 0.9;
+}
+
+.socialicon a:hover{
+    background-color: #272727;
+    transition: 0.5s;
+}
+
+.socialicon a:hover i{
+    color: white;
+    transition: 0.5s;
+}
+
+.footerBottom{
+    background-color: #000000;
+    padding: 20px;
+    text-align: center;
+}
+
+.footerBottom p{
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: lighter;
+}
+
+
+
+/* Styles for cellphones (up to 768px width) */
+@media screen and (max-width: 768px) {
+    /* Your CSS rules for cellphones go here */
+
+    .brand{
+        font-size: 2rem;
+    }
+
+    .brandpig{
+        font-size: 2rem;
+    }
+    header{
+        padding: 1.3rem 5%;
+        display: flex;
+        text-align: start;
+    }
+
+    .icons{
+        display: inline-flex;
+    }
+
+    #check:checked~.icons #menu-icon {
+        display: none;
+    }
+
+    .icons #close-icon{
+        display: none;
+    }
+
+    #check:checked~.icons #close-icon {
+        display: block;
+    }
+
+
+    .navbar{
+        position: absolute;
+        margin: 0;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 0;
+        background: black;
+        overflow: hidden;
+        transition: .5s ease ;
+    }
+
+    #check:checked~.navbar {
+        height: 100vh;
+        
+    }
+
+    .navbar a{
+        position: relative;
+        display: block;
+        font-size: 1.5rem;
+        margin: .5rem 0;
+        padding: 25px;
+        text-align: center;
+        z-index: 1;
+        
+    }
+
+    .navbar a:nth-child(5){
+        background: #ffd700;
+        color: black;
+    }
+
+    .navbar a:after{
+        content: '';
+        position: absolute;
+        background-color: #ffd700;
+        height: 100%;
+        width: 0;
+        z-index: 1;
+        transition: 0.3s;
+       
+    }
+
+    .navbar a:hover::after{
+        z-index: -1;
+        width: 100%;
+       
+        
+    }
+    .navbar a:hover{
+        
+        color: black;
+    }
+
+    .button1 button{
+        
+        font-size: 1.4rem;
+        
+    }
+
+
+    .loyaltyBox1{
+        padding-top: 15%;
+       
+    }
+
+    .loyaltyh1{
+        font-size: 2rem;
+       
+    }
+    
+    .loyaltyh2{
+        font-size: 1.4rem;
+        
+        
+    }
+    
+    .loyaltyh3{
+        font-size: 1.7rem;
+      
+        
+    }
+    
+    .loyaltyp{
+        
+        font-size: .7rem;
+    }
+
+    .loyaltyBox2 img{
+        position: relative;
+        width: 75vw;
+    
+    }
+
+
+    
+
+
+
+  }
+  
+  /* Styles for tablets (768px to 1024px width) */
+  @media screen and (min-width: 769px) and (max-width: 1024px) {
+    /* Your CSS rules for tablets go here */
+
+    .brand{
+        font-size: 2.5rem;
+    }
+
+    .brandpig{
+        font-size: 2.5rem;
+    }
+    header{
+        padding: 1.3rem 10%;
+        display: flex;
+        text-align: start;
+    }
+
+    .icons{
+        display: inline-flex;
+    }
+
+    #check:checked~.icons #menu-icon {
+        display: none;
+    }
+
+
+    .icons #close-icon{
+        display: none;
+    }
+
+    #check:checked~.icons #close-icon {
+        display: block;
+    }
+
+
+
+    .navbar{
+        position: absolute;
+        margin: 0;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 0;
+        background: black;
+        overflow: hidden;
+        transition: .5s ease ;
+    }
+    .navbar a:nth-child(5){
+        background: #ffd700;
+        color: black;
+    }
+
+    #check:checked~.navbar {
+        height: 100vh;
+        
+    }
+    .navbar a{
+        position: relative;
+        display: block;
+        font-size: 2rem;
+        margin: 1rem 0;
+        padding: 20px;
+        text-align: center;
+        z-index: 1;
+        
+    }
+
+    .navbar a:after{
+        content: '';
+        position: absolute;
+        background-color: #ffd700;
+        height: 100%;
+        width: 0;
+        z-index: 1;
+        transition: 0.3s;
+       
+    }
+
+    .navbar a:hover::after{
+        z-index: -1;
+        width: 100%;
+       
+        
+    }
+    .navbar a:hover{
+        
+        color: black;
+    }
+
+    .button1 button{
+        
+        font-size: 1.5rem;
+        
+    }
+
+
+
+    .loyaltyBox1{
+        padding-top: 12%;
+       
+    }
+
+    .loyaltyh1{
+        font-size: 3rem;
+       
+    }
+    
+    .loyaltyh2{
+        font-size: 1.6rem;
+        
+        
+    }
+    
+    .loyaltyh3{
+        font-size: 2rem;
+      
+        
+    }
+    
+    .loyaltyp{
+        
+        font-size: .8rem;
+    }
+
+    .loyaltyBox2 img{
+        position: relative;
+        width: 70vw;
+    
+    }
+
+    
+
+
+
+
+  }
+  
+  /* Styles for laptops (1025px to 1440px width) */
+  @media screen and (min-width: 1025px) and (max-width: 1440px) {
+    /* Your CSS rules for laptops go here */
+    .loyaltyBox1{
+        padding-top: 10%;
+       
+    }
+
+    .loyaltyh1{
+        font-size: 4rem;
+       
+    }
+    
+    .loyaltyh2{
+        font-size: 1.8rem;
+        
+        
+    }
+    
+    .loyaltyh3{
+        font-size: 2.5rem;
+      
+        
+    }
+    
+    .loyaltyp{
+        
+        font-size: .9rem;
+    }
+
+    .loyaltyBox2 img{
+        position: relative;
+        width: 60vw;
+    
+    }
+    
+    
+    
+    
+  }
+  
+  /* Styles for desktops (1441px and above width) */
+  @media screen and (min-width: 1441px) {
+    /* Your CSS rules for desktops go here */
+    
+  }

@@ -1,0 +1,696 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lilita One',serif;
+    text-decoration: none;
+    list-style: none;
+
+}
+
+body{
+   
+    justify-content: center;
+    background-color: #ffd700;
+    overflow-x: hidden;
+    padding-top: 14%;
+
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.3rem 10%;
+    
+    display: block;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    z-index: 100;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    z-index: -1;
+}
+
+.brand{
+  
+    color: black;
+    -webkit-text-stroke: 0.04rem #ffd700;
+    font-size: 3rem;
+    transition: all 0.3s ease 0s;
+}
+
+.brand:hover{
+    color: #ffd700;
+    
+}
+
+.brandpig{
+    color: #ffd700;
+    
+    font-size: 3rem;
+    transition: all 0.3s ease 0s;
+    margin-bottom: 2%;
+
+}
+
+.brandpig:hover{
+    color: black;
+    -webkit-text-stroke: 0.05rem #ffd700;
+   
+    
+}
+
+
+
+.navbar a{
+    position: relative;
+    font-size: 1rem;
+    color: #ffd700;
+    text-decoration: none;
+    
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+    
+    transition: .3s ease-in;
+    
+}
+
+.navbar a:nth-child(3){
+    background: #ffd700;
+    color: black;
+}
+
+.navbar a::after{
+    content: '';
+    position: absolute;
+    background-color: #ffd700;
+    height: 100%;
+    width: 0;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.3s;
+    
+}
+
+.navbar a:hover::after{
+    
+    width: 100%;
+   
+    
+}
+
+.navbar a:hover{
+ 
+    color: black;
+}
+
+.navbar a:nth-child(6):after{
+    
+    display: none;
+}
+.button1 button{
+    padding: 10px 10px;
+    background-color: #000000;
+    border-color: #ffd700;
+    color: #ffd700;
+    font-size: 1rem;
+    transition: all 0.3s ease 0s;
+}
+
+.button1 button:hover{
+    background-color: #ffd700;
+    color: black;
+}
+
+
+#check {
+    display: none;
+}
+
+.icons {
+    position: absolute;
+    font-size: 2.8rem;
+    right: 5%;
+    color: #ffd700;
+    cursor: pointer;
+    display: none;
+}
+
+
+
+.aboutBox{
+    
+    display: flex;
+    justify-content: space-evenly;
+    font-family: 'Courier New', Courier, monospace;
+    flex-wrap: wrap;
+    gap: 3rem;
+    
+
+}
+
+.box1{
+    position: relative;
+    align-items: center;
+    
+    height: 500px;
+    place-content: center;
+    text-align: center;
+    padding-left: 10%;
+    padding-right:10% ;
+
+}
+
+.box1 h1{
+    position: relative;
+    padding: 2%;
+    font-size: 2rem;
+    font-weight: lighter;
+    letter-spacing: 2px;
+    
+}
+
+.box1 p{
+    position: relative;
+    line-height: 30px;
+    font-size: medium;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+.chefBox{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding-bottom: 10%;
+
+}
+
+.chefBox1{
+    position: relative;
+}
+
+.chefBox1 img{
+    position: relative;
+
+}
+
+
+/*footer*/
+footer{
+    
+    background-color: black;
+    width: 100%;
+    padding: 70px 30px 20px ;
+}
+
+.socialicon{
+    display: flex;
+    justify-content: center;
+}
+
+.socialicon a{
+    text-decoration: none;
+    padding: 10px ;
+    background-color: white;
+    margin: 10px;
+    border-radius: 50%;
+}
+
+.socialicon a i{
+    font-size: 2rem;
+    color: black;
+    opacity: 0.9;
+}
+
+.socialicon a:hover{
+    background-color: #272727;
+    transition: 0.5s;
+}
+
+.socialicon a:hover i{
+    color: white;
+    transition: 0.5s;
+}
+
+.footerBottom{
+    background-color: #000000;
+    padding: 20px;
+    text-align: center;
+}
+
+.footerBottom p{
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: lighter;
+}
+
+
+
+
+
+
+@media screen and (max-width: 461px) {
+
+    header{
+        padding: 1.3rem 5%;
+        display: flex;
+        text-align: start;
+    }
+
+    .icons{
+        display: inline-flex;
+    }
+
+    #check:checked~.icons #menu-icon {
+        display: none;
+    }
+
+    .icons #close-icon{
+        display: none;
+    }
+
+    #check:checked~.icons #close-icon {
+        display: block;
+    }
+
+
+    .navbar{
+        position: absolute;
+        margin: 0;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 0;
+        background: black;
+        overflow: hidden;
+        transition: .5s ease ;
+    }
+
+    #check:checked~.navbar {
+        height: 100vh;
+        
+    }
+
+    .navbar a{
+        position: relative;
+        display: block;
+        font-size: 1.5rem;
+        margin: .5rem 0;
+        padding: 25px;
+        text-align: center;
+        z-index: 1;
+        
+    }
+
+    .navbar a:nth-child(3){
+        background: #ffd700;
+        color: black;
+    }
+
+    .navbar a:after{
+        content: '';
+        position: absolute;
+        background-color: #ffd700;
+        height: 100%;
+        width: 0;
+        z-index: 1;
+        transition: 0.3s;
+       
+    }
+
+    .navbar a:hover::after{
+        z-index: -1;
+        width: 100%;
+       
+        
+    }
+    .navbar a:hover{
+        
+        color: black;
+    }
+
+    body{
+        padding-top: 50%;
+    }
+
+    .box1 p{
+        font-size: .5rem;
+        line-height: 12px;
+    }
+
+    .box1 h1{
+        padding: 2%;
+        font-size: 1rem;
+    }
+
+    .chefBox{
+      
+        
+        padding-bottom: 40%;
+        
+    
+    }
+
+    .chefBox1{
+       position: absolute;
+       
+       
+    }
+    
+    .chefBox1 img{
+        width: 200px;
+       
+    
+    }
+}
+
+
+
+/* Styles for cellphones (up to 768px width) */
+@media screen and  (min-width: 462px) and (max-width: 768px) {
+    /* Your CSS rules for cellphones go here */
+    .brand{
+        font-size: 2rem;
+    }
+
+    .brandpig{
+        font-size: 2rem;
+    }
+    header{
+        padding: 1.3rem 5%;
+        display: flex;
+        text-align: start;
+    }
+
+    .icons{
+        display: inline-flex;
+    }
+
+    #check:checked~.icons #menu-icon {
+        display: none;
+    }
+
+    .icons #close-icon{
+        display: none;
+    }
+
+    #check:checked~.icons #close-icon {
+        display: block;
+    }
+
+
+    .navbar{
+        position: absolute;
+        margin: 0;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 0;
+        background: black;
+        overflow: hidden;
+        transition: .5s ease ;
+    }
+
+    #check:checked~.navbar {
+        height: 100vh;
+        
+    }
+
+    .navbar a{
+        position: relative;
+        display: block;
+        font-size: 1.5rem;
+        margin: .5rem 0;
+        padding: 25px;
+        text-align: center;
+        z-index: 1;
+        
+    }
+
+    .navbar a:nth-child(3){
+        background: #ffd700;
+        color: black;
+    }
+
+    .navbar a:after{
+        content: '';
+        position: absolute;
+        background-color: #ffd700;
+        height: 100%;
+        width: 0;
+        z-index: 1;
+        transition: 0.3s;
+       
+    }
+
+    .navbar a:hover::after{
+        z-index: -1;
+        width: 100%;
+       
+        
+    }
+    .navbar a:hover{
+        
+        color: black;
+    }
+
+    .button1 button{
+        font-size: 1.4rem;
+    }
+
+    body{
+        padding-top: 35%;
+    }
+
+    .box1 h1{
+        
+        padding: 2%;
+        font-size: 1.4rem;
+        
+        
+    }
+    
+    .box1 p{
+    
+        line-height: 30px;
+        font-size: .8rem;
+        line-height: 18px;
+       
+    
+    }
+
+    .chefBox{
+
+        padding-left: 20%;
+        padding-right: 20%;
+        padding-bottom: 40%;
+        
+    
+    }
+
+    .chefBox1{
+       position: absolute;
+       padding-top: 10%;
+       
+    }
+    
+    .chefBox1 img{
+        width: 300px;
+       
+    
+    }
+
+
+
+
+  }
+  
+  /* Styles for tablets (768px to 1024px width) */
+  @media screen and (min-width: 769px) and (max-width: 1024px) {
+    /* Your CSS rules for tablets go here */
+
+    .brand{
+        font-size: 2.5rem;
+    }
+
+    .brandpig{
+        font-size: 2.5rem;
+    }
+    header{
+        padding: 1.3rem 10%;
+        display: flex;
+        text-align: start;
+    }
+
+    .icons{
+        display: inline-flex;
+    }
+
+    #check:checked~.icons #menu-icon {
+        display: none;
+    }
+
+
+    .icons #close-icon{
+        display: none;
+    }
+
+    #check:checked~.icons #close-icon {
+        display: block;
+    }
+
+
+
+    .navbar{
+        position: absolute;
+        margin: 0;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 0;
+        background: black;
+        overflow: hidden;
+        transition: .5s ease ;
+    }
+    .navbar a:nth-child(3){
+        background: #ffd700;
+        color: black;
+    }
+
+    #check:checked~.navbar {
+        height: 100vh;
+        
+    }
+    .navbar a{
+        position: relative;
+        display: block;
+        font-size: 2rem;
+        margin: 1rem 0;
+        padding: 20px;
+        text-align: center;
+        z-index: 1;
+        
+    }
+
+    .navbar a:after{
+        content: '';
+        position: absolute;
+        background-color: #ffd700;
+        height: 100%;
+        width: 0;
+        z-index: 1;
+        transition: 0.3s;
+       
+    }
+
+    .navbar a:hover::after{
+        z-index: -1;
+        width: 100%;
+       
+        
+    }
+    .navbar a:hover{
+        
+        color: black;
+    }
+    
+
+    .button1 button{
+        font-size: 1.5rem;
+    }
+
+
+    body{
+        padding-top: 25%;
+    }
+    
+    .box1 h1{
+        
+        padding: 2%;
+        font-size: 1.5rem;
+        
+        
+    }
+    
+    .box1 p{
+    
+        line-height: 30px;
+        font-size: .8rem;
+        line-height: 19px;
+       
+    
+    }
+
+    .chefBox{
+
+        padding-left: 20%;
+        padding-right: 20%;
+        padding-bottom: 40%;
+        
+    
+    }
+
+    .chefBox1{
+       position: absolute;
+       padding-top: 10%;
+       
+    }
+    
+    .chefBox1 img{
+        width: 500px;
+       
+    
+    }
+
+
+
+
+  }
+  
+  /* Styles for laptops (1025px to 1440px width) */
+  @media screen and (min-width: 1025px) and (max-width: 1440px) {
+    /* Your CSS rules for laptops go here */
+    body{
+        padding-top: 20%;
+    }
+
+    
+  }
+  
+  /* Styles for desktops (1441px and above width) */
+  @media screen and (min-width: 1441px) {
+    /* Your CSS rules for desktops go here */
+    .box1 h1{
+        
+        padding: 2%;
+        font-size: 2.5rem;
+        
+        
+    }
+    
+    .box1 p{
+    
+        line-height: 30px;
+        font-size: 1rem;
+       
+    
+    }
+  }

@@ -1,0 +1,749 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lilita One',serif;
+    text-decoration: none;
+    list-style: none;
+
+}
+
+body{
+   
+    justify-content: center;
+    background-color: #ffd700;
+    overflow-x: hidden;
+    padding-top: 15%;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.3rem 10%;
+    
+    display: block;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    z-index: 100;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    z-index: -1;
+}
+
+.brand{
+  
+    color: black;
+    -webkit-text-stroke: 0.04rem #ffd700;
+    font-size: 3rem;
+    transition: all 0.3s ease 0s;
+}
+
+.brand:hover{
+    color: #ffd700;
+    
+}
+
+.brandpig{
+    color: #ffd700;
+    
+    font-size: 3rem;
+    transition: all 0.3s ease 0s;
+    margin-bottom: 2%;
+
+}
+
+.brandpig:hover{
+    color: black;
+    -webkit-text-stroke: 0.05rem #ffd700;
+   
+    
+}
+
+
+
+.navbar a{
+    position: relative;
+    font-size: 1rem;
+    color: #ffd700;
+    text-decoration: none;
+    
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+    
+    transition: .3s ease-in;
+    
+}
+
+.navbar a:nth-child(2){
+    background: #ffd700;
+    color: black;
+}
+
+.navbar a::after{
+    content: '';
+    position: absolute;
+    background-color: #ffd700;
+    height: 100%;
+    width: 0;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.3s;
+    
+}
+
+.navbar a:hover::after{
+    
+    width: 100%;
+   
+    
+}
+.navbar a:nth-child(6):after{
+    
+    display: none;
+}
+
+.navbar a:hover{
+ 
+    color: black;
+}
+
+.buttonw button{
+    padding: 10px 10px;
+    background-color: #000000;
+    border-color: #ffd700;
+    color: #ffd700;
+    font-size: 1rem;
+    transition: all 0.3s ease 0s;
+}
+
+.buttonw button:hover{
+    background-color: #ffd700;
+    color: black;
+}
+
+#check {
+    display: none;
+}
+
+.icons {
+    position: absolute;
+    font-size: 2.8rem;
+    right: 5%;
+    color: #ffd700;
+    cursor: pointer;
+    display: none;
+}
+
+
+
+/*content*/
+.menuBox{
+    
+    display: flex;
+    justify-content: space-evenly;
+    font-family: 'Courier New', Courier, monospace;
+
+    flex-wrap: wrap;
+    
+    gap: 3rem;
+    height: 85vh;
+    
+
+}
+
+.box1{
+    position: relative;
+    align-items: center;
+    width: 40vw;
+   
+    place-content: center;
+    text-align: center;
+
+}
+
+.box1 h1{
+    position: relative;
+    padding: 20px;
+    font-size: 3rem;
+    font-weight: lighter;
+    letter-spacing: 2px;
+    
+}
+
+.box1 p{
+    position: relative;
+    line-height: 30px;
+    font-size: medium;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+.button1 button{
+    padding: 10px 10px;
+    background-color: black;
+  
+    color: #ffd700;
+    font-size: 1rem;
+    transition: all 0.3s ease 0s;
+}
+
+.button1 button:hover{
+    background-color: #ffd700;
+    color: black;
+}
+
+.button2 button{
+    padding: 10px 10px;
+    background-color: #ffd700;
+    border-color: black;
+    color: black;
+    font-size: 1rem;
+    transition: all 0.3s ease 0s;
+}
+
+.button2 button:hover{
+    background-color: black;
+    color: #ffd700;
+}
+
+
+
+
+.bbqh1{
+    font-size: 1.5rem;
+    font-family: 'Black Ops One';
+ }
+ 
+.bbqp{
+ 
+    font-family: 'Black Ops One';
+}
+
+.horiline{
+    width: 80vw;
+    height: 1px;
+    background-color: black;
+}
+  
+
+.bbqBox{
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    flex-wrap: wrap;
+    gap: 3rem;
+    line-height: 40px;
+    padding-left: 5%;
+    padding-right: 5%;
+    
+}
+
+.bbqbox1{
+   
+    position: relative;
+    width: 600px;
+    height: 700px;
+
+
+}
+
+.bbqbox1 img{
+    position: relative;
+  
+    width: 100%;
+    
+}
+
+.bbqbox1 h1{
+    position: relative;
+    font-weight: lighter;
+    font-family: 'Black Ops One';
+    
+}
+
+
+
+.bbqbox2{
+    
+    position: relative;
+    width: 600px;
+    height: 700px;
+   
+
+}
+
+.bbqbox2 img{
+    position: relative;
+    width: 100%;
+    
+}
+
+.bbqbox2 h1{
+    position: relative;
+    font-weight: lighter;
+    font-family: 'Black Ops One';
+
+    
+}
+
+.platterBox{
+   
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+    line-height: 40px;
+    padding-left: 5%;
+    padding-right: 5%;
+    
+}
+
+.platterbox1{
+    
+    position: relative;
+    width: 500px;
+    height: 850px;
+   
+
+}
+
+.platterbox1 img{
+    position: relative;
+    width: 100%;
+    
+}
+
+.platterbox1 h1{
+    position: relative;
+    font-weight: lighter;
+    font-family: 'Black Ops One';
+
+    
+}
+
+.platterbox1 p{
+    position: relative;
+    font-size: 12px;
+    font-family: 'Black Ops One';
+    line-height: 10px;
+
+    
+}
+
+.sandwichBox{
+    
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+    line-height: 40px;
+    padding-left: 5%;
+    padding-right: 5%;
+    
+}
+
+.sandwichbox1{
+    
+    position: relative;
+    width: 500px;
+    height: 850px;
+   
+
+}
+
+.sandwichbox1 img{
+    position: relative;
+    width: 100%;
+    
+}
+
+.sandwichbox1 h1{
+    position: relative;
+    font-weight: lighter;
+    font-family: 'Black Ops One';
+
+    
+}
+
+.sandwichbox1 p{
+    position: relative;
+    font-size: 12px;
+    font-family: 'Black Ops One';
+    line-height: 10px;
+
+    
+}
+
+
+
+
+/*footer*/
+footer{
+    
+    background-color: black;
+    width: 100%;
+    padding: 70px 30px 20px ;
+}
+
+.socialicon{
+    display: flex;
+    justify-content: center;
+}
+
+.socialicon a{
+    text-decoration: none;
+    padding: 10px ;
+    background-color: white;
+    margin: 10px;
+    border-radius: 50%;
+}
+
+.socialicon a i{
+    font-size: 2rem;
+    color: black;
+    opacity: 0.9;
+}
+
+.socialicon a:hover{
+    background-color: #272727;
+    transition: 0.5s;
+}
+
+.socialicon a:hover i{
+    color: white;
+    transition: 0.5s;
+}
+
+.footerBottom{
+    background-color: #000000;
+    padding: 20px;
+    text-align: center;
+}
+
+.footerBottom p{
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: lighter;
+}
+
+
+
+/* Styles for cellphones (up to 768px width) */
+@media screen and (max-width: 768px) {
+    /* Your CSS rules for cellphones go here */
+    .brand{
+        font-size: 2rem;
+    }
+
+    .brandpig{
+        font-size: 2rem;
+    }
+
+    header{
+        padding: 1.3rem 5%;
+        display: flex;
+        text-align: start;
+    }
+
+    .icons{
+        display: inline-flex;
+    }
+
+    #check:checked~.icons #menu-icon {
+        display: none;
+    }
+
+    .icons #close-icon{
+        display: none;
+    }
+
+    #check:checked~.icons #close-icon {
+        display: block;
+    }
+
+
+    .navbar{
+        position: absolute;
+        margin: 0;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 0;
+        background: black;
+        overflow: hidden;
+        transition: .5s ease ;
+    }
+
+    #check:checked~.navbar {
+        height: 100vh;
+        
+    }
+
+    .navbar a{
+        position: relative;
+        display: block;
+        font-size: 1.5rem;
+        margin: .5rem 0;
+        padding: 25px;
+        text-align: center;
+        z-index: 1;
+        
+    }
+
+    .navbar a:nth-child(2){
+        background: #ffd700;
+        color: black;
+    }
+
+    .navbar a:after{
+        content: '';
+        position: absolute;
+        background-color: #ffd700;
+        height: 100%;
+        width: 0;
+        z-index: 1;
+        transition: 0.3s;
+       
+    }
+
+    .navbar a:hover::after{
+        z-index: -1;
+        width: 100%;
+       
+        
+    }
+    .navbar a:hover{
+        
+        color: black;
+    }
+
+    .buttonw button{
+        
+        font-size: 1.4rem;
+      
+    }
+    
+   
+    body{
+        padding-top: 35%;
+    }
+
+    .box1{
+
+        width: 80vw;
+       
+   
+    
+    }
+
+    .box1 h1{
+       
+        font-size: 2rem;
+      
+        
+    }
+    
+    .box1 p{
+        
+        font-size: small;
+        
+    
+    }
+
+    .menuBox{
+        height: 85vh;
+    }
+
+    
+    
+
+  }
+  
+  /* Styles for tablets (768px to 1024px width) */
+  @media screen and (min-width: 769px) and (max-width: 1024px) {
+    /* Your CSS rules for tablets go here */
+
+    .brand{
+        font-size: 2.5rem;
+    }
+
+    .brandpig{
+        font-size: 2.5rem;
+    }
+    header{
+        padding: 1.3rem 10%;
+        display: flex;
+        text-align: start;
+    }
+
+    .icons{
+        display: inline-flex;
+    }
+
+    #check:checked~.icons #menu-icon {
+        display: none;
+    }
+
+
+    .icons #close-icon{
+        display: none;
+    }
+
+    #check:checked~.icons #close-icon {
+        display: block;
+    }
+
+
+
+    .navbar{
+        position: absolute;
+        margin: 0;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 0;
+        background: black;
+        overflow: hidden;
+        transition: .5s ease ;
+    }
+    .navbar a:nth-child(2){
+        background: #ffd700;
+        color: black;
+    }
+
+    #check:checked~.navbar {
+        height: 100vh;
+        
+    }
+    .navbar a{
+        position: relative;
+        display: block;
+        font-size: 2rem;
+        margin: 1rem 0;
+        padding: 20px;
+        text-align: center;
+        z-index: 1;
+        
+    }
+
+    .navbar a:after{
+        content: '';
+        position: absolute;
+        background-color: #ffd700;
+        height: 100%;
+        width: 0;
+        z-index: 1;
+        transition: 0.3s;
+       
+    }
+
+    .navbar a:hover::after{
+        z-index: -1;
+        width: 100%;
+       
+        
+    }
+    .navbar a:hover{
+        
+        color: black;
+    }
+
+    .buttonw button{
+        
+        font-size: 1.5rem;
+      
+    }
+
+
+    body{
+        padding-top: 25%;
+    }
+
+    .box1{
+
+        width: 80vw;
+        
+   
+    
+    }
+
+    
+
+    .box1 h1{
+       
+        font-size: 2.5rem;
+      
+        
+    }
+    
+    .box1 p{
+        
+        font-size: medium;
+        
+    
+    }
+
+    .menuBox{
+        height: 70vh;
+    }
+
+
+    
+
+
+
+
+
+
+    
+  }
+  
+  /* Styles for laptops (1025px to 1440px width) */
+  @media screen and (min-width: 1025px) and (max-width: 1440px) {
+    /* Your CSS rules for laptops go here */
+    body{
+        padding-top: 20%;
+    }
+
+    .box1{
+
+        width: 70vw;
+        
+   
+    
+    }
+
+    .menuBox{
+        height: 70vh;
+    }
+
+
+    
+    
+  }
+  
+  /* Styles for desktops (1441px and above width) */
+  @media screen and (min-width: 1441px) {
+    /* Your CSS rules for desktops go here */
+    
+    
+  }
